@@ -29,7 +29,9 @@ class ToyGridComponent {
 
     this.render();
   };
-
+  deleteToy = (id) => {
+    API.deleteToy(id, () => API.fetchToys(this.saveToys, alert), alert);
+  };
   init = () => {
     this.state.loading = true;
     this.htmlElement = document.createElement("div");
@@ -55,14 +57,14 @@ class ToyGridComponent {
           ({ id, ...props }) =>
             new ToysCardComponent({
               ...props,
-              onDelete: () => this.deleteCar(id),
+              onDelete: () => this.deleteToy(id),
             })
         )
         .map((x) => x.htmlElement)
         .map(this.wrapInColumn);
       this.htmlElement.append(...toysElements);
     } else {
-      this.htmlElement.innerHTML = `<h1 class="m-auto">Žaislų šiuo metu nėra</h1>`;
+      this.htmlElement.innerHTML = `<h1 class="text-center">Žaislų šiuo metu nėra</h1>`;
     }
   };
 }

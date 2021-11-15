@@ -56,7 +56,7 @@
         "amount": 150
       },
       "ageRestriction": {
-        "from": 8
+        "from":null
       },
       "discount": {
         "type": "absolute",
