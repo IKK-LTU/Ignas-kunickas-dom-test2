@@ -1,0 +1,24 @@
+{
+  "name": "ignas-kunickas-dom-test2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-win": "node_modules\\.bin\\json-server --watch database.json",
+    "start-unix": "node_modules/.bin/json-server --watch database.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IKK-LTU/Ignas-kunickas-dom-test2.git"
+  },
+  "author": "Ignas Kunickas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IKK-LTU/Ignas-kunickas-dom-test2/issues"
+  },
+  "homepage": "https://github.com/IKK-LTU/Ignas-kunickas-dom-test2#readme",
+  "description": "",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
